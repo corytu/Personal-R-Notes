@@ -1,6 +1,6 @@
 # Personal-R-Notes
 ## Data cleaning and manipulation
-* _Ordering the data frame with data in its column(s)_<br>
+* Ordering the data frame with data in its column(s)<br>
 `order` function can do the trick here. For example, `airquality[order(airquality$Month),]` and `airquality[order(airquality$Day),]` order that data frame by Month and Day respectively. Multiple argumets in `order` are allowed.
 
 ## Data visualization
@@ -12,11 +12,11 @@ Decent explanation and demonstration of mechanisms of `ggplot2::position_dodge`.
 Using `grid` to place the plots and the legends in an arbitrary layout. I also modified this function to allow shared axes titles and to specify only ncol or nrow.
 
 ## Functions for general R programming
-* _All arguments after an ellipsis must have default values_<br>
+* All arguments after an ellipsis must have default values<br>
 For example, `paste (..., sep = " ", collapse = NULL)` in its documentation.
-* _Generating messages for function users_<br>
+* Generating messages for function users<br>
 `message` is used for generating a diagnostic message, while `warning` and `stop` are for generating warnings and fetal errors respectively. `stopifnot`, on the other hand, is "If any of the expressions in `...` are not all TRUE, `stop` is called, producing an error message indicating the first of the elements of `...` which were not true."
-* _Using functions (once) without loading the package_<br>
+* Using functions (once) without loading the package<br>
 Specify the package and function separated by `::`. For example, calling `reshape2::melt` is equivalent to `library(reshape2)` or `require(reshape2)` before `melt`.
 
 ## Useful packages (ordered alphabetically)
