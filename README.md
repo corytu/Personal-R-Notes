@@ -56,8 +56,13 @@ Wonderful GUI for machine learning analyses. The author emphasizes its capabilit
 * [shiny](https://shiny.rstudio.com/)<br>
 Building interactive interface and present data to others even they don't know R. Its tutorial is very worth reading.
 
-## Questions which I gave answers on Stack Overflow
+## Stack Overflow
+### Answered
 * [Extracting values from nested lists](http://stackoverflow.com/questions/42771789/extracting-values-from-nested-lists/)
 * [ggplot: How to change facet labels?](http://stackoverflow.com/questions/3472980/ggplot-how-to-change-facet-labels/)
 * [How to assign colnames for multiple dataframes from their first row in R environment](http://stackoverflow.com/questions/44014184/how-to-assign-colnames-for-multiple-dataframes-from-their-first-row-in-r-environ/)
 * [Testing whether two vectors are increasing or decreasing in R](http://stackoverflow.com/questions/44015452/testing-whether-two-vectors-are-increasing-or-decreasing-in-r/)
+
+### Asked
+* [R returns factor(0) when predicting with a SVM model](http://stackoverflow.com/questions/44003391/r-returns-factor0-when-predicting-with-a-svm-model)
+* [Using R to extract indices of a matching letter from a string](http://stackoverflow.com/questions/40927854/using-r-to-extract-indices-of-a-matching-letter-from-a-string)
