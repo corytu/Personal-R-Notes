@@ -3,6 +3,9 @@
 * Ordering the data frame with data in its column(s)<br>
 `order` function can do the trick here. For example, `airquality[order(airquality$Month),]` and `airquality[order(airquality$Day),]` order that data frame by Month and Day respectively. Multiple argumets in `order` are allowed.
 
+## Logic
+* `xor` indicates elementwise exclusive OR.
+
 ## Data visualization
 * <a href="http://stackoverflow.com/questions/10357768/plotting-lines-and-the-group-aesthetic-in-ggplot2">Plotting lines and the group aesthetic in ggplot2</a><br>
 A good thing to know when using `ggplot2` to plot a line chart where x-axis is a categorical variable.
@@ -11,13 +14,21 @@ Decent explanation and demonstration of mechanisms of `ggplot2::position_dodge`.
 * [Share a legend between multiple plots using grid.arrange](https://github.com/tidyverse/ggplot2/wiki/Share-a-legend-between-two-ggplot2-graphs)<br>
 Using `grid` to place the plots and the legends in an arbitrary layout. I also modified this function to allow shared axes titles and to specify only ncol or nrow.
 
-## Functions for general R programming
+## Knowledge for general R programming
 * All arguments after an ellipsis must have default values<br>
 For example, `paste (..., sep = " ", collapse = NULL)` in its documentation.
 * Generating messages for function users<br>
 `message` is used for generating a diagnostic message, while `warning` and `stop` are for generating warnings and fetal errors respectively. `stopifnot`, on the other hand, is "If any of the expressions in `...` are not all TRUE, `stop` is called, producing an error message indicating the first of the elements of `...` which were not true."
 * Using functions (once) without loading the package<br>
 Specify the package and function separated by `::`. For example, calling `reshape2::melt` is equivalent to `library(reshape2)` or `require(reshape2)` before `melt`.
+
+## "apply" family
+`apply`, `sapply`, `lapply`, `tapply`, and `mapply`. Use them wisely.
+
+## Useful functions
+* `diff` returns suitably lagged and iterated differences, e.g. `diff(1:5)`.
+* `unlist` simplifies it to produce a vector which contains all the atomic components which occur in the given list.
+* `unname` removes the names or dimnames attribute of an R object.
 
 ## Useful packages (ordered alphabetically)
 * [car](https://cran.r-project.org/package=car)<br>
@@ -44,3 +55,9 @@ Wonderful GUI for machine learning analyses. The author emphasizes its capabilit
 `melt` the data into a long-format or `cast` it into a wide-format. An example is provided <a href="https://corytu.github.io/R_Language_Playground/reshape2_melt.html">here</a>.
 * [shiny](https://shiny.rstudio.com/)<br>
 Building interactive interface and present data to others even they don't know R. Its tutorial is very worth reading.
+
+## Questions which I gave answers on Stack Overflow
+* [Extracting values from nested lists](http://stackoverflow.com/questions/42771789/extracting-values-from-nested-lists/)
+* [ggplot: How to change facet labels?](http://stackoverflow.com/questions/3472980/ggplot-how-to-change-facet-labels/)
+* [How to assign colnames for multiple dataframes from their first row in R environment](http://stackoverflow.com/questions/44014184/how-to-assign-colnames-for-multiple-dataframes-from-their-first-row-in-r-environ/)
+* [Testing whether two vectors are increasing or decreasing in R](http://stackoverflow.com/questions/44015452/testing-whether-two-vectors-are-increasing-or-decreasing-in-r/)
