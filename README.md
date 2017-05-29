@@ -33,6 +33,8 @@ Specify the package and function separated by `::`. For example, calling `reshap
 ## Useful packages (ordered alphabetically)
 * [car](https://cran.r-project.org/package=car)<br>
 Short for "Companion to Applied Regression". Two of the useful functions are `Anova` and `Manova`, which can calculate type-II or type-III ANOVA and MANOVA respectively.
+* [caret](http://topepo.github.io/caret/index.html)<br>
+Short for "__C__lassification __A__nd __RE__gression __T__raining". A package integrate multiple machine learning algorithm packages. In addition, it helps data preprocessing and cross-validation with `confusionMatrix`.
 * [cowplot](https://cran.r-project.org/web/packages/cowplot/vignettes/introduction.html)<br>
 Merging multiple ggplots and labeling them respectively in one graph.
 * [dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/introduction.html)<br>
