@@ -29,6 +29,7 @@ Specify the package and function separated by `::`. For example, calling `reshap
 * `append` adds elements to a vector.
 * `diff` returns suitably lagged and iterated differences, e.g. `diff(1:5)`.
 * `Reduce` uses a binary function to successively combine the elements of a given vector and a possibly given initial value.
+* `sprintf` returns a character vector containing a formatted combination of text and variable values.
 * `unlist` simplifies it to produce a vector which contains all the atomic components which occur in the given list.
 * `unname` removes the names or dimnames attribute of an R object.
 
