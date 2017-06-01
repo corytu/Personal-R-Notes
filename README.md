@@ -7,6 +7,8 @@
 * `sub` and `gsub` perform replacement of the first and all matches respectively.
 * `sprintf` returns a character vector containing a formatted combination of text and variable values.
 * `substr` extracts or replaces substrings in a character vector.
+* `strsplit` splits the elements of a character vector x into substrings according to the matches to substring split within them.
+* `tolower` and `toupper` convert upper-case characters in a character vector to lower-case, or vice versa. Non-alphabetic characters are left unchanged.
 
 ## Logic
 * `xor` indicates elementwise exclusive OR.
