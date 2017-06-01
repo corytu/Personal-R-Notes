@@ -1,7 +1,12 @@
 # Personal-R-Notes
 ## Data cleaning and manipulation
-* Ordering the data frame with data in its column(s)<br>
-`order` function can do the trick here. For example, `airquality[order(airquality$Month),]` and `airquality[order(airquality$Day),]` order that data frame by Month and Day respectively. Multiple argumets in `order` are allowed.
+* `order` can order the data frame with data in its column(s). For example, `airquality[order(airquality$Month),]` and `airquality[order(airquality$Day),]` order that data frame by Month and Day respectively. Multiple argumets in `order` are allowed.
+
+## Word processing (including regular expressions)
+* `grep`, `grepl`, `regexpr`, `gregexpr` and `regexec` search for matches to argument pattern within each element of a character vector: they differ in the format of and amount of detail in the results.
+* `sub` and `gsub` perform replacement of the first and all matches respectively.
+* `sprintf` returns a character vector containing a formatted combination of text and variable values.
+* `substr` extracts or replaces substrings in a character vector.
 
 ## Logic
 * `xor` indicates elementwise exclusive OR.
@@ -22,15 +27,14 @@ For example, `paste (..., sep = " ", collapse = NULL)` in its documentation.
 * Using functions (once) without loading the package<br>
 Specify the package and function separated by `::`. For example, calling `reshape2::melt` is equivalent to `library(reshape2)` or `require(reshape2)` before `melt`.
 
-## "apply" family
-`apply`, `sapply`, `lapply`, `tapply`, and `mapply`. Use them wisely.
+## Loop functions
+* `apply`, `sapply`, `lapply`, `tapply`, and `mapply`. ("apply" family)
+* `Reduce` uses a binary function to successively combine the elements of a given vector and a possibly given initial value.
+* `replicate` is a wrapper for the common use of sapply for repeated evaluation of an expression (which will usually involve random number generation).
 
 ## Useful functions
 * `append` adds elements to a vector.
 * `diff` returns suitably lagged and iterated differences, e.g. `diff(1:5)`.
-* `Reduce` uses a binary function to successively combine the elements of a given vector and a possibly given initial value.
-* `replicate` is a wrapper for the common use of sapply for repeated evaluation of an expression (which will usually involve random number generation).
-* `sprintf` returns a character vector containing a formatted combination of text and variable values.
 * `unlist` simplifies it to produce a vector which contains all the atomic components which occur in the given list.
 * `unname` removes the names or dimnames attribute of an R object.
 
