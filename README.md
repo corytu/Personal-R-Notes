@@ -1,6 +1,8 @@
 # Personal-R-Notes
 ## Data cleaning and manipulation
+* `anyNA`, `complete.cases`, `is.na`, and `na.omit` are useful when finding or excluding NAs.
 * `order` can order the data frame with data in its column(s). For example, `airquality[order(airquality$Month),]` and `airquality[order(airquality$Day),]` order that data frame by Month and Day respectively. Multiple argumets in `order` are allowed.
+* `transform` transforms columns in a data frame.
 
 ## Word processing (including regular expressions)
 * `grep`, `grepl`, `regexpr`, `gregexpr` and `regexec` search for matches to argument pattern within each element of a character vector: they differ in the format of and amount of detail in the results.
@@ -38,7 +40,8 @@ Specify the package and function separated by `::`. For example, calling `reshap
 ## Useful functions
 * `append` adds elements to a vector.
 * `diff` returns suitably lagged and iterated differences, e.g. `diff(1:5)`.
-* `do.call` constructs and executes a function call from a name or a function and a list of arguments to be passed to it.
+* `do.call` constructs and executes a function call from a name or a function and a list of arguments to be passed to it. `call` constructs an unevaluated call.
+* `identical` tests two objects for being exactly equal.
 * `system.time` returns CPU (and other) times that expr used. Compare this with `Sys.time`.
 * `unlist` simplifies it to produce a vector which contains all the atomic components which occur in the given list.
 * `unname` removes the names or dimnames attribute of an R object.
