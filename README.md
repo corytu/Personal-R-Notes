@@ -38,6 +38,7 @@ Specify the package and function separated by `::`. For example, calling `reshap
 ## Useful functions
 * `append` adds elements to a vector.
 * `diff` returns suitably lagged and iterated differences, e.g. `diff(1:5)`.
+* `system.time` returns CPU (and other) times that expr used. Compare this with `Sys.time`.
 * `unlist` simplifies it to produce a vector which contains all the atomic components which occur in the given list.
 * `unname` removes the names or dimnames attribute of an R object.
 
