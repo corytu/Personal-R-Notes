@@ -24,11 +24,13 @@ Decent explanation and demonstration of mechanisms of `ggplot2::position_dodge`.
 * [Share a legend between multiple plots using grid.arrange](https://github.com/tidyverse/ggplot2/wiki/Share-a-legend-between-two-ggplot2-graphs)<br>
 Using `grid` to place the plots and the legends in an arbitrary layout. I also modified this function to allow shared axes titles and to specify only ncol or nrow.
 
-## Knowledge for general R programming
+## Functions for programming R functions
 * All arguments after an ellipsis must have default values<br>
 For example, `paste (..., sep = " ", collapse = NULL)` in its documentation.
 * Generating messages for function users<br>
 `message` is used for generating a diagnostic message, while `warning` and `stop` are for generating warnings and fetal errors respectively. `stopifnot`, on the other hand, is "If any of the expressions in `...` are not all TRUE, `stop` is called, producing an error message indicating the first of the elements of `...` which were not true."
+* Testing whether a value was specified as an argument to a function<br>
+`missing` can used in this scenario. For instance, `test <- function(y = 1) {if (missing(y)) {print(y)}}`.
 * Using functions (once) without loading the package<br>
 Specify the package and function separated by `::`. For example, calling `reshape2::melt` is equivalent to `library(reshape2)` or `require(reshape2)` before `melt`.
 
