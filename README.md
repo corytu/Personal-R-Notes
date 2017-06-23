@@ -1,4 +1,10 @@
 # Personal-R-Notes
+## Files management
+* `setwd` & `getwd`
+* `list.files`
+* `file.exists`
+* `download.file`
+
 ## Data cleaning and manipulation
 * `anyNA`, `complete.cases`, `is.na`, and `na.omit` are useful when finding or excluding NAs.
 * `order` can order the data frame with data in its column(s). For example, `airquality[order(airquality$Month),]` and `airquality[order(airquality$Day),]` order that data frame by Month and Day respectively. Multiple argumets in `order` are allowed.
