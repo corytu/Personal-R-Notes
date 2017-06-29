@@ -11,6 +11,7 @@
 * `transform` transforms columns in a data frame.
 
 ## Word processing (including regular expressions)
+* [R的字串處理](https://www.ptt.cc/bbs/Statistics/M.1277714037.A.2CC.html)
 * `grep`, `grepl`, `regexpr`, `gregexpr` and `regexec` search for matches to argument pattern within each element of a character vector: they differ in the format of and amount of detail in the results.
 * `sub` and `gsub` perform replacement of the first and all matches respectively.
 * `sprintf` returns a character vector containing a formatted combination of text and variable values.
