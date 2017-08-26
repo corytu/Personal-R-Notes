@@ -1,8 +1,8 @@
 # Personal-R-Notes
 ## Files management
 * `setwd` & `getwd`
-* `list.files`
-* `file.exists`
+* `list.files` & `list.dirs`
+* `file.exists`, `file.copy`, `file.rename`, `file.remove`
 * `download.file`
 
 ## Data cleaning and manipulation
@@ -26,23 +26,27 @@
 ## Data visualization
 * <a href="http://stackoverflow.com/questions/10357768/plotting-lines-and-the-group-aesthetic-in-ggplot2">Plotting lines and the group aesthetic in ggplot2</a><br>
 A good thing to know when using `ggplot2` to plot a line chart where x-axis is a categorical variable.
+* [Never use [] or $ inside aes](https://stackoverflow.com/questions/32543340/behavior-ggplot2-aes-in-combination-with-facet-grid-when-passing-variable-wi)<br>
+Avoid using column slicing with `[]` or `$` in `ggplot2::aes`.
 * <a href="http://stackoverflow.com/questions/34889766/what-is-the-width-argument-in-position-dodge">What is the width argument in position_dodge?</a><br>
 Decent explanation and demonstration of mechanisms of `ggplot2::position_dodge`.
 * [Share a legend between multiple plots using grid.arrange](https://github.com/tidyverse/ggplot2/wiki/Share-a-legend-between-two-ggplot2-graphs)<br>
 Using `grid` to place the plots and the legends in an arbitrary layout. I also modified this function to allow shared axes titles and to specify only ncol or nrow.
 
-## Functions for programming R functions
-* All arguments after an ellipsis must have default values<br>
-For example, `paste (..., sep = " ", collapse = NULL)` in its documentation.
-* Generating messages for function users<br>
-`message` is used for generating a diagnostic message, while `warning` and `stop` are for generating warnings and fetal errors respectively. `stopifnot`, on the other hand, is "If any of the expressions in `...` are not all TRUE, `stop` is called, producing an error message indicating the first of the elements of `...` which were not true."
-* Testing whether a value was specified as an argument to a function<br>
-`missing` can used in this scenario. For instance, `test <- function(y = 1) {if (missing(y)) {print(y)}}`.
-* Using functions (once) without loading the package<br>
-Specify the package and function separated by `::`. For example, calling `reshape2::melt` is equivalent to `library(reshape2)` or `require(reshape2)` before `melt`.
+## Functions for programming in R
+* All arguments after an ellipsis must have default values.
+* Generating messages for function users:
+    * `message` is used for generating a diagnostic message
+    * `warning` and `stop` are for generating warnings and fetal errors respectively.
+    * `stopifnot`, is "If any of the expressions in `...` are not all TRUE, `stop` is called, producing an error message indicating the first of the elements of `...` which were not true."
+* `missing` can be used to test whether a value was specified as an argument to a function. For instance, `test <- function(y = 1) {if (missing(y)) {print(y)}}`.
+* `exist` can test whether the named object exist in the specified environment.
+* `::` to use functions (once) without loading the package For example, calling `reshape2::melt` is equivalent to `library(reshape2)` or `require(reshape2)` before `melt`.
 
 ## Loop functions
 * `apply`, `sapply`, `lapply`, `tapply`, and `mapply`. ("apply" family)
+* `split` divides the data in the vector x into the groups defined by f.
+* `by` is an object-oriented wrapper for `tapply` applied to data frames.
 * `Reduce` uses a binary function to successively combine the elements of a given vector and a possibly given initial value.
 * `replicate` is a wrapper for the common use of sapply for repeated evaluation of an expression (which will usually involve random number generation).
 
@@ -66,11 +70,17 @@ Merging multiple ggplots and labeling them respectively in one graph.
 Some other ways to manipulate or cleanse data.
 * [e1071](https://cran.r-project.org/package=e1071)<br>
 LIBSVM package for R.
+* [ggmap](https://cran.r-project.org/web/packages/ggmap/index.html)<br>
+Spatial visualization with ggplot2.
 * [ggplot2](http://ggplot2.org)<br>
 A popular plotting system in R.
+* [googleVis](https://cran.r-project.org/web/packages/googleVis/vignettes/googleVis_examples.html)<br>
+R interface to Google's chart tools, allowing users to create interactive charts based on data frames.
 * [gridExtra](https://cran.r-project.org/package=gridExtra)<br>
 "Miscellaneous Functions for 'Grid' Graphics." A tutorial can be found <a href="http://www.sthda.com/english/wiki/ggplot2-easy-way-to-mix-multiple-graphs-on-the-same-page-r-software-and-data-visualization">here</a>.
-* <a href="https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html">magrittr</a><br>
+* [leaflet](https://rstudio.github.io/leaflet/)<br>
+Useful for adding markers and (interactive) polygons on the map.
+* [magrittr](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html)<br>
 The "pipe-like" operator `%>%` allows people to transmit a value or object to an expression or function call.
 * [MCMCglmm](https://cran.r-project.org/package=MCMCglmm)<br>
 A package for fitting Bayesian mixed models in R. More introduction and tutorial <a href="https://github.com/tmalsburg/MCMCglmm-intro">here</a>.
