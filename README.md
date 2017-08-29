@@ -37,11 +37,12 @@ Using `grid` to place the plots and the legends in an arbitrary layout. I also m
 * All arguments after an ellipsis must have default values.
 * The arguments can be passed by order or by specified names. When specifying names, they can be either names themselves or characters. For instances, `mean(x = 1:3)` is equivalent to `mean("x" = 1:3)`.
 * Generating messages for function users:
-    * `message` is used for generating a diagnostic message
-    * `warning` and `stop` are for generating warnings and fetal errors respectively.
-    * `stopifnot`, is "If any of the expressions in `...` are not all TRUE, `stop` is called, producing an error message indicating the first of the elements of `...` which were not true."
+  * `message` is used for generating a diagnostic message
+  * `warning` and `stop` are for generating warnings and fetal errors respectively.
+  * `stopifnot`, is "If any of the expressions in `...` are not all TRUE, `stop` is called, producing an error message indicating the first of the elements of `...` which were not true."
 * `missing` can be used to test whether a value was specified as an argument to a function. For instance, `test <- function(y = 1) {if (missing(y)) {print(y)}}`.
 * `exist` can test whether the named object exist in the specified environment.
+* `readline` reads a line from the terminal (in interactive use).
 * `::` to use functions (once) without loading the package For example, calling `reshape2::melt` is equivalent to `library(reshape2)` or `require(reshape2)` before `melt`.
 
 ## Loop functions
