@@ -57,7 +57,7 @@ Using `grid` to place the plots and the legends in an arbitrary layout. I also m
 ## Other useful functions
 * `append` adds elements to a vector.
 * `diff` returns suitably lagged and iterated differences, e.g. `diff(1:5)`.
-* `do.call` constructs and executes a function call from a name or a function and a list of arguments to be passed to it. `call` constructs an unevaluated call.
+* `call` constructs an unevaluated call.
 * `identical` tests two objects for being exactly equal.
 * `system.time` returns CPU (and other) times that expr used. Compare this with `Sys.time`.
 * `unlist` simplifies it to produce a vector which contains all the atomic components which occur in the given list.
