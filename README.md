@@ -46,14 +46,15 @@ Using `grid` to place the plots and the legends in an arbitrary layout. I also m
 * `readline` reads a line from the terminal (in interactive use).
 * `::` to use functions (once) without loading the package For example, calling `reshape2::melt` is equivalent to `library(reshape2)` or `require(reshape2)` before `melt`.
 
-## Loop functions
-* `apply`, `sapply`, `lapply`, `tapply`, and `mapply`. ("apply" family)
+## Functions do loops or parallel operations
 * `split` divides the data in the vector x into the groups defined by f.
+* `apply`, `sapply`, `lapply`, `tapply`, and `mapply`. ("apply" family)
 * `by` is an object-oriented wrapper for `tapply` applied to data frames.
 * `Reduce` uses a binary function to successively combine the elements of a given vector and a possibly given initial value.
+* `do.call` constructs and executes a function call from a name or a function and a list of arguments to be passed to it.
 * `replicate` is a wrapper for the common use of sapply for repeated evaluation of an expression (which will usually involve random number generation).
 
-## Useful functions
+## Other useful functions
 * `append` adds elements to a vector.
 * `diff` returns suitably lagged and iterated differences, e.g. `diff(1:5)`.
 * `do.call` constructs and executes a function call from a name or a function and a list of arguments to be passed to it. `call` constructs an unevaluated call.
