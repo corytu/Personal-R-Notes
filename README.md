@@ -41,6 +41,7 @@ Using `grid` to place the plots and the legends in an arbitrary layout. I also m
   * `warning` and `stop` are for generating warnings and fetal errors respectively.
   * `stopifnot`, is "If any of the expressions in `...` are not all TRUE, `stop` is called, producing an error message indicating the first of the elements of `...` which were not true."
 * `missing` can be used to test whether a value was specified as an argument to a function. For instance, `test <- function(y = 1) {if (missing(y)) {print(y)}}`.
+* `on.exit` records the expression given as its argument as needing to be executed when the current function exits (either naturally or as the result of an error).
 * `exist` can test whether the named object exist in the specified environment.
 * `readline` reads a line from the terminal (in interactive use).
 * `::` to use functions (once) without loading the package For example, calling `reshape2::melt` is equivalent to `library(reshape2)` or `require(reshape2)` before `melt`.
