@@ -62,6 +62,7 @@ Using `grid` to place the plots and the legends in an arbitrary layout. I also m
 * `system.time` returns CPU (and other) times that expr used. Compare this with `Sys.time`.
 * `unlist` simplifies it to produce a vector which contains all the atomic components which occur in the given list.
 * `unname` removes the names or dimnames attribute of an R object.
+* `search` gives a list of attached packages (see library), and R objects, usually data frames.
 
 ## Useful packages (ordered alphabetically)
 * [car](https://cran.r-project.org/package=car)<br>
