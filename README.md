@@ -53,6 +53,7 @@ Using `grid` to place the plots and the legends in an arbitrary layout. I also m
 * `Reduce` uses a binary function to successively combine the elements of a given vector and a possibly given initial value.
 * `do.call` constructs and executes a function call from a name or a function and a list of arguments to be passed to it.
 * `replicate` is a wrapper for the common use of sapply for repeated evaluation of an expression (which will usually involve random number generation).
+* `Vectorize` creates a function wrapper that vectorizes the action of its argument FUN.
 
 ## Other useful functions
 * `append` adds elements to a vector.
