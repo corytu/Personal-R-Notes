@@ -33,6 +33,9 @@ Decent explanation and demonstration of mechanisms of `ggplot2::position_dodge`.
 * [Share a legend between multiple plots using grid.arrange](https://github.com/tidyverse/ggplot2/wiki/Share-a-legend-between-two-ggplot2-graphs)<br>
 Using `grid` to place the plots and the legends in an arbitrary layout. I also modified this function to allow shared axes titles and to specify only ncol or nrow.
 
+* [Heat maps with ggplot2](http://blog.aicry.com/r-heat-maps-with-ggplot2/)<br>
+A tutorial for creating heat maps in R, including with base and ggplot2 system.
+
 ## Functions for programming in R
 * All arguments after an ellipsis must have default values.
 * The arguments can be passed by order or by specified names. When specifying names, they can be either names themselves or characters. For instances, `mean(x = 1:3)` is equivalent to `mean("x" = 1:3)`.
@@ -64,6 +67,13 @@ Using `grid` to place the plots and the legends in an arbitrary layout. I also m
 * `unlist` simplifies it to produce a vector which contains all the atomic components which occur in the given list.
 * `unname` removes the names or dimnames attribute of an R object.
 * `search` gives a list of attached packages (see library), and R objects, usually data frames.
+* `rle` computes the lengths and values of runs of equal values in a vector.
+* `sequence` can be regarded as the vectorized version of `seq_len`.<br>
+  ```r
+  x <- c(rep(1:4, times = 1:4), 1, 1)
+  sequence(rle(x)$length)
+  # 1 1 2 1 2 3 1 2 3 4 1 2
+  ```
 
 ## Useful packages (ordered alphabetically)
 * [car](https://cran.r-project.org/package=car)<br>
@@ -72,6 +82,8 @@ Short for "Companion to Applied Regression". Two of the useful functions are `An
 Short for "**C**lassification **A**nd **RE**gression **T**raining". A package integrate multiple machine learning algorithm packages. In addition, it helps data preprocessing and cross-validation with `confusionMatrix`.
 * [cowplot](https://cran.r-project.org/web/packages/cowplot/vignettes/introduction.html)<br>
 Merging multiple ggplots and labeling them respectively in one graph.
+* [dendextend](https://cran.r-project.org/web/packages/dendextend/vignettes/introduction.html)<br>
+Extended functions for built-in dendrograms in R.
 * [dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/introduction.html)<br>
 Some other ways to manipulate or cleanse data.
 * [e1071](https://cran.r-project.org/package=e1071)<br>
