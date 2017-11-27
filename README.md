@@ -1,4 +1,8 @@
 # Personal-R-Notes
+## Getting help
+* `?` or `help` gives the documentation of a specific function.
+* `??` or `help.search` searches for provided key word (or regex pattern) in the help system.
+
 ## Files management
 * `setwd` & `getwd`
 * `list.files` & `list.dirs`
