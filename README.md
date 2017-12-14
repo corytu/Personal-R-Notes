@@ -63,6 +63,8 @@ A tutorial for creating heat maps in R, including with base and ggplot2 system.
 * `Vectorize` creates a function wrapper that vectorizes the action of its argument FUN.
 
 ## Other useful functions
+* `class` returns the data type (or to be specific, the method) of one object. Compare this with `mode`.
+* `str` compactly displays the internal structure of an R object
 * `append` adds elements to a vector.
 * `diff` returns suitably lagged and iterated differences, e.g. `diff(1:5)`.
 * `call` constructs an unevaluated call.
