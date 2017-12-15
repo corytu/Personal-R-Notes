@@ -43,6 +43,7 @@ A tutorial for creating heat maps in R, including with base and ggplot2 system.
 ## Functions for programming in R
 * All arguments after an ellipsis must have default values.
 * The arguments can be passed by order or by specified names. When specifying names, they can be either names themselves or characters. For instances, `mean(x = 1:3)` is equivalent to `mean("x" = 1:3)`.
+* `return` returns the result of an expression and ignores all the following lines in that function.
 * Generating messages for function users:
   * `message` is used for generating a diagnostic message
   * `warning` and `stop` are for generating warnings and fetal errors respectively.
