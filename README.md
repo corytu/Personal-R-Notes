@@ -56,7 +56,7 @@ A tutorial for creating heat maps in R, including with base and ggplot2 system.
 
 ## Functions do loops or parallel operations
 * `split` divides the data in the vector x into the groups defined by f.
-* `apply`, `sapply`, `lapply`, `tapply`, and `mapply`. ("apply" family)
+* `apply`, `sapply`, `lapply`, `tapply`, and `mapply` ("apply" family). See an example of `mapply` [here](mapply_example.R) since it's more complicated.
 * `by` is an object-oriented wrapper for `tapply` applied to data frames.
 * `Reduce` uses a binary function to successively combine the elements of a given vector and a possibly given initial value.
 * `do.call` constructs and executes a function call from a name or a function and a list of arguments to be passed to it.
