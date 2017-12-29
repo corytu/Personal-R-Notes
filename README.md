@@ -40,7 +40,7 @@ Using `grid` to place the plots and the legends in an arbitrary layout. I also m
 * [Heat maps with ggplot2](http://blog.aicry.com/r-heat-maps-with-ggplot2/)<br>
 A tutorial for creating heat maps in R, including with base and ggplot2 system.
 
-## Functions for programming in R
+## Functions for programming
 * All arguments after an ellipsis must have default values.
 * The arguments can be passed by order or by specified names. When specifying names, they can be either names themselves or characters. For instances, `mean(x = 1:3)` is equivalent to `mean("x" = 1:3)`.
 * `return` returns the result of an expression and ignores all the following lines in that function.
