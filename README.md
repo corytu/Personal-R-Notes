@@ -121,6 +121,7 @@ Building interactive interface and present data to others even they don't know R
 ## Stack Overflow
 ### Answered
 * [Could not fetch elements from a list in R as one element contains multiple elements](http://stackoverflow.com/questions/44096790/could-not-fetch-elements-from-a-list-in-r-as-one-element-contains-multiple-elem)
+* [Export R plot to multiple formats](https://stackoverflow.com/questions/48132169/export-r-plot-to-multiple-formats/)
 * [Extracting values from nested lists](http://stackoverflow.com/questions/42771789/extracting-values-from-nested-lists/)
 * [ggplot: How to change facet labels?](http://stackoverflow.com/questions/3472980/ggplot-how-to-change-facet-labels/)
 * [How to assign colnames for multiple dataframes from their first row in R environment](http://stackoverflow.com/questions/44014184/how-to-assign-colnames-for-multiple-dataframes-from-their-first-row-in-r-environ/)
