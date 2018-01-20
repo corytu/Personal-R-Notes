@@ -16,10 +16,10 @@ MICE有一個很重要的前設，那就是所有的缺失值必須都是隨機�
 另外，在上述步驟4的預測填補過程中，有一點決定MICE運算是否正確的關鍵：拿來預測缺失值的模型係數，並非直接取自該模型的係數期望值（Beta），而是從每一個係數的聯合分佈中，隨機抽取數組係數組合（Beta\*）（[Gibbs sampling](https://en.wikipedia.org/wiki/Gibbs_sampling) from [joint probability distribution](https://en.wikipedia.org/wiki/Joint_probability_distribution) of Beta），再用Beta\*中的組合各自預測並嘗試填補缺失值，最後被選中的結果，是在Beta\*中，模型輸出含較為接近原已知觀測值的。如此過程稱為predictive mean matching（PMM），能確保對缺失值的填補仍有足夠的變異性。
 
 在R與Python各自有實現MICE的套件：
-* [mice](https://cran.r-project.org/web/packages/mice/index.html) on R
+* [mice](https://cran.r-project.org/web/packages/mice/index.html) in R
   * Reference: [Stef van Buuren, Karin Groothuis-Oudshoorn (2011). mice: Multivariate Imputation by Chained Equations in R. *Journal of Statistical Software*, 45(3), 1-67.](https://www.jstatsoft.org/article/view/v045i03)
   * GitHub: [stefvanbuuren/mice](https://github.com/stefvanbuuren/mice)
-* [fancyimpute](https://pypi.python.org/pypi/fancyimpute) on Python
+* [fancyimpute](https://pypi.python.org/pypi/fancyimpute) in Python
   * GitHub: [iskandr/fancyimpute](https://github.com/iskandr/fancyimpute)
 
 ----
