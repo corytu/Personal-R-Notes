@@ -108,7 +108,7 @@ Useful for adding markers and (interactive) polygons on the map.
 * [magrittr](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html)<br>
 The "pipe-like" operator `%>%` allows people to transmit a value or object to an expression or function call.
 * [MICE](https://cran.r-project.org/web/packages/mice/index.html)<br>
-Short for "Multivariate Imputation by Chained Equations". Tutorials of means, including but not limit to MICE, to deal with missing data can be found in [this webpage](http://rpubs.com/skydome20/R-Note10-Missing_Value) (in Mandarin). Check also [Tutorial on 5 Powerful R Packages used for imputing missing values](https://www.analyticsvidhya.com/blog/2016/03/tutorial-powerful-packages-imputing-missing-values/).
+Short for "Multivariate Imputation by Chained Equations". Tutorials of means, including but not limit to MICE, to deal with missing data can be found in [this webpage](http://rpubs.com/skydome20/R-Note10-Missing_Value) (in Mandarin). Check also [my understanding to MICE](mice.md) and [Tutorial on 5 Powerful R Packages used for imputing missing values](https://www.analyticsvidhya.com/blog/2016/03/tutorial-powerful-packages-imputing-missing-values/).
 * [MCMCglmm](https://cran.r-project.org/package=MCMCglmm)<br>
 A package for fitting Bayesian mixed models in R. More introduction and tutorial <a href="https://github.com/tmalsburg/MCMCglmm-intro">here</a>.
 * [plotly](https://plot.ly/r/)<br>
