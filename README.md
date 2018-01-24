@@ -127,7 +127,7 @@ Building interactive interface and present data to others even they don't know R
 * [Extracting values from nested lists](https://stackoverflow.com/questions/42771789/extracting-values-from-nested-lists/42780187#42780187)
 * [ggplot: How to change facet labels?](https://stackoverflow.com/questions/3472980/ggplot-how-to-change-facet-labels/42709856#42709856)
 * [How to assign colnames for multiple dataframes from their first row in R environment](https://stackoverflow.com/questions/44014184/how-to-assign-colnames-for-multiple-dataframes-from-their-first-row-in-r-environ/44014528#44014528)
-* [Indexing empty elements within a list in R](https://stackoverflow.com/questions/48402779/indexing-empty-elements-within-a-list-in-r/48404945#48404945)
+* [rbinding with a list containing empty lists for NAs in R](https://stackoverflow.com/questions/48402779/rbinding-with-a-list-containing-empty-lists-for-nas-in-r/48404945#48404945)
 * [`predict` method for “mice” package](https://stackoverflow.com/questions/48132169/export-r-plot-to-multiple-formats/48134298#48134298)
 * [Testing whether two vectors are increasing or decreasing in R](https://stackoverflow.com/questions/44015452/testing-whether-two-vectors-are-increasing-or-decreasing-in-r/44037888#44037888)
 
