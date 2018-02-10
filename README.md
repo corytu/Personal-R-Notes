@@ -1,4 +1,7 @@
 # Personal-R-Notes
+## General
+* [Naming conventions of R](https://www.r-bloggers.com/consistent-naming-conventions-in-r/)
+
 ## Getting help
 * `?` or `help` gives the documentation of a specific function.
 * `??` or `help.search` searches for provided key word (or regex pattern) in the help system.
