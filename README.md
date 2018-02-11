@@ -1,23 +1,42 @@
 # Personal-R-Notes
-## General
+
+* [General articles](#general-articles)
+* [Getting help](#getting-help)
+* [Files management](#files-management)
+* [Data cleaning and manipulation](#data-cleaning-and-manipulation)
+* [Word processing (including regular expressions)](#word-processing)
+* [Logic](#logic)
+* [Data visualization](#data-visualization)
+* [R programming](#r-programming)
+* [Functions do loops or parallel operations](#functions-do-loops-or-parallel-operations)
+* [Other useful functions](#other-useful-functions)
+* [Packages (ordered alphabetically)](#packages)
+* [Stack Overflow](#stack-overflow)
+
+## General articles
+
 * [Naming conventions of R](https://www.r-bloggers.com/consistent-naming-conventions-in-r/)
 
 ## Getting help
+
 * `?` or `help` gives the documentation of a specific function.
 * `??` or `help.search` searches for provided key word (or regex pattern) in the help system.
 
 ## Files management
-* `setwd` & `getwd`
-* `list.files` & `list.dirs`
-* `file.exists`, `file.copy`, `file.rename`, `file.remove`
-* `download.file`
+
+* `setwd` & `getwd`: Setting working directory
+* `list.files` & `list.dirs`: List all files or directories in the given path.
+* `file.exists`, `file.copy`, `file.rename`, `file.remove`: System level of file manipulation.
+* `download.file`: Download files from the Internet in an R session.
 
 ## Data cleaning and manipulation
+
 * `anyNA`, `complete.cases`, `is.na`, and `na.omit` are useful when finding or excluding NAs.
 * `order` can order the data frame with data in its column(s). For example, `airquality[order(airquality$Month),]` and `airquality[order(airquality$Day),]` order that data frame by Month and Day respectively. Multiple argumets in `order` are allowed.
 * `transform` transforms columns in a data frame.
 
-## Word processing (including regular expressions)
+## Word processing
+
 * [R的字串處理](https://www.ptt.cc/bbs/Statistics/M.1277714037.A.2CC.html)
 * `grep`, `grepl`, `regexpr`, `gregexpr` and `regexec` search for matches to argument pattern within each element of a character vector: they differ in the format of and amount of detail in the results.
 * `sub` and `gsub` perform replacement of the first and all matches respectively.
@@ -28,22 +47,23 @@
 * `nchar` takes a character vector as an argument and returns a vector whose elements contain the sizes of the corresponding elements of x.
 
 ## Logic
+
 * `xor` indicates elementwise exclusive OR.
 
 ## Data visualization
-* <a href="http://stackoverflow.com/questions/10357768/plotting-lines-and-the-group-aesthetic-in-ggplot2">Plotting lines and the group aesthetic in ggplot2</a><br>
-A good thing to know when using `ggplot2` to plot a line chart where x-axis is a categorical variable.
-* [Never use [] or $ inside aes](https://stackoverflow.com/questions/32543340/behavior-ggplot2-aes-in-combination-with-facet-grid-when-passing-variable-wi)<br>
+
+* [Plotting lines and the group aesthetic in ggplot2](http://stackoverflow.com/questions/10357768/plotting-lines-and-the-group-aesthetic-in-ggplot2)<br>A good thing to know when using `ggplot2` to plot a line chart where x-axis is a categorical variable.
+* [Never use \[\] or $ inside `aes`](https://stackoverflow.com/questions/32543340/behavior-ggplot2-aes-in-combination-with-facet-grid-when-passing-variable-wi)<br>
 Avoid using column slicing with `[]` or `$` in `ggplot2::aes`.
-* <a href="http://stackoverflow.com/questions/34889766/what-is-the-width-argument-in-position-dodge">What is the width argument in position_dodge?</a><br>
+* [What is the width argument in position_dodge?](http://stackoverflow.com/questions/34889766/what-is-the-width-argument-in-position-dodge)<br>
 Decent explanation and demonstration of mechanisms of `ggplot2::position_dodge`.
 * [Share a legend between multiple plots using grid.arrange](https://github.com/tidyverse/ggplot2/wiki/Share-a-legend-between-two-ggplot2-graphs)<br>
 Using `grid` to place the plots and the legends in an arbitrary layout. I also modified this function to allow shared axes titles and to specify only ncol or nrow.
-
 * [Heat maps with ggplot2](http://blog.aicry.com/r-heat-maps-with-ggplot2/)<br>
 A tutorial for creating heat maps in R, including with base and ggplot2 system.
 
-## Functions for programming
+## R programming
+
 * All arguments after an ellipsis must have default values.
 * The arguments can be passed by order or by specified names. When specifying names, they can be either names themselves or characters. For instances, `mean(x = 1:3)` is equivalent to `mean("x" = 1:3)`.
 * `return` returns the result of an expression and ignores all the following lines in that function.
@@ -58,20 +78,31 @@ A tutorial for creating heat maps in R, including with base and ggplot2 system.
 * `::` to use functions (once) without loading the package For example, calling `reshape2::melt` is equivalent to `library(reshape2)` or `require(reshape2)` before `melt`.
 
 ## Functions do loops or parallel operations
+
 * `split` divides the data in the vector x into the groups defined by f.
-* `apply`, `sapply`, `lapply`, `tapply`, and `mapply` ("apply" family). See an example of `mapply` [here](mapply_example.R) since it's more complicated.
+* `apply`, `sapply`, `lapply`, `tapply`, and `mapply` ("apply" family). See [an example of `mapply`](mapply_example.R) since it's more complicated.
 * `by` is an object-oriented wrapper for `tapply` applied to data frames.
 * `Reduce` uses a binary function to successively combine the elements of a given vector and a possibly given initial value.
-* `do.call` constructs and executes a function call from a name or a function and a list of arguments to be passed to it.
+* `do.call` constructs and executes a function call from a name or a function and a list of arguments to be passed to it, while `call` only constructs the function call.
+  ```r
+  to_bind <- list(data.frame(A = 1:2, B = 3:4), data.frame(A = 7:9, B = 5:7))
+  do.call(rbind, to_bind)
+  #   A B
+  # 1 1 3
+  # 2 2 4
+  # 3 7 5
+  # 4 8 6
+  # 5 9 7
+  ```
 * `replicate` is a wrapper for the common use of sapply for repeated evaluation of an expression (which will usually involve random number generation).
 * `Vectorize` creates a function wrapper that vectorizes the action of its argument FUN.
 
 ## Other useful functions
+
 * `class` returns the data type (or to be specific, the method) of one object. Compare this with `mode`.
 * `str` compactly displays the internal structure of an R object
 * `append` adds elements to a vector.
 * `diff` returns suitably lagged and iterated differences, e.g. `diff(1:5)`.
-* `call` constructs an unevaluated call.
 * `identical` tests two objects for being exactly equal.
 * `system.time` returns CPU (and other) times that expr used. Compare this with `Sys.time`.
 * `unlist` simplifies it to produce a vector which contains all the atomic components which occur in the given list.
@@ -85,7 +116,8 @@ A tutorial for creating heat maps in R, including with base and ggplot2 system.
   # 1 1 2 1 2 3 1 2 3 4 1 2
   ```
 
-## Useful packages (ordered alphabetically)
+## Packages
+
 * [car](https://cran.r-project.org/package=car)<br>
 Short for "Companion to Applied Regression". Two of the useful functions are `Anova` and `Manova`, which can calculate type-II or type-III ANOVA and MANOVA respectively.
 * [caret](http://topepo.github.io/caret/index.html)<br>
@@ -124,7 +156,9 @@ Wonderful GUI for machine learning analyses. The author emphasizes its capabilit
 Building interactive interface and present data to others even they don't know R. Its tutorial is very worth reading.
 
 ## Stack Overflow
+
 ### Answered
+
 * [Could not fetch elements from a list in R as one element contains multiple elements](https://stackoverflow.com/questions/44096790/could-not-fetch-elements-from-a-list-in-r-as-one-element-contains-multiple-elem/44097682#44097682)
 * [Export R plot to multiple formats](https://stackoverflow.com/questions/48132169/export-r-plot-to-multiple-formats/48134298#48134298)
 * [Extracting values from nested lists](https://stackoverflow.com/questions/42771789/extracting-values-from-nested-lists/42780187#42780187)
@@ -135,5 +169,6 @@ Building interactive interface and present data to others even they don't know R
 * [Testing whether two vectors are increasing or decreasing in R](https://stackoverflow.com/questions/44015452/testing-whether-two-vectors-are-increasing-or-decreasing-in-r/44037888#44037888)
 
 ### Asked
+
 * [R returns factor(0) when predicting with a SVM model](http://stackoverflow.com/questions/44003391/r-returns-factor0-when-predicting-with-a-svm-model)
 * [Using R to extract indices of a matching letter from a string](http://stackoverflow.com/questions/40927854/using-r-to-extract-indices-of-a-matching-letter-from-a-string)
