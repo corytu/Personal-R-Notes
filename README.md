@@ -57,7 +57,7 @@
 Avoid using column slicing with `[]` or `$` in `ggplot2::aes`.
 * [What is the width argument in position_dodge?](http://stackoverflow.com/questions/34889766/what-is-the-width-argument-in-position-dodge)<br>
 Decent explanation and demonstration of mechanisms of `ggplot2::position_dodge`.
-* [Share a legend between multiple plots using grid.arrange](https://github.com/tidyverse/ggplot2/wiki/Share-a-legend-between-two-ggplot2-graphs)<br>
+* [Share a legend between multiple plots using `grid.arrange`](https://github.com/tidyverse/ggplot2/wiki/Share-a-legend-between-two-ggplot2-graphs)<br>
 Using `grid` to place the plots and the legends in an arbitrary layout. I also modified this function to allow shared axes titles and to specify only ncol or nrow.
 * [Heat maps with ggplot2](http://blog.aicry.com/r-heat-maps-with-ggplot2/)<br>
 A tutorial for creating heat maps in R, including with base and ggplot2 system.
