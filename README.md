@@ -2,16 +2,19 @@
 
 * [General articles](#general-articles)
 * [Getting help](#getting-help)
+* [Logic](#logic)
 * [Files management](#files-management)
 * [Data cleaning and manipulation](#data-cleaning-and-manipulation)
-* [Word processing (including regular expressions)](#word-processing)
-* [Logic](#logic)
 * [Data visualization](#data-visualization)
 * [R programming](#r-programming)
-* [Functions do loops or parallel operations](#functions-do-loops-or-parallel-operations)
-* [Other useful functions](#other-useful-functions)
+  * [Word processing (including regular expressions)](#word-processing)
+  * [Functions do loops or parallel operations](#functions-do-loops-or-parallel-operations)
+  * [Other useful functions](#other-useful-functions)
 * [Packages (ordered alphabetically)](#packages)
 * [Stack Overflow](#stack-overflow)
+  * [Answered](#answered)
+  * [Asked](#asked)
+
 
 ## General articles
 
@@ -21,6 +24,10 @@
 
 * `?` or `help` gives the documentation of a specific function.
 * `??` or `help.search` searches for provided key word (or regex pattern) in the help system.
+
+## Logic
+
+* `xor` indicates elementwise exclusive OR.
 
 ## Files management
 
@@ -34,21 +41,6 @@
 * `anyNA`, `complete.cases`, `is.na`, and `na.omit` are useful when finding or excluding NAs.
 * `order` can order the data frame with data in its column(s). For example, `airquality[order(airquality$Month),]` and `airquality[order(airquality$Day),]` order that data frame by Month and Day respectively. Multiple argumets in `order` are allowed.
 * `transform` transforms columns in a data frame.
-
-## Word processing
-
-* [R的字串處理](https://www.ptt.cc/bbs/Statistics/M.1277714037.A.2CC.html)
-* `grep`, `grepl`, `regexpr`, `gregexpr` and `regexec` search for matches to argument pattern within each element of a character vector: they differ in the format of and amount of detail in the results.
-* `sub` and `gsub` perform replacement of the first and all matches respectively.
-* `sprintf` returns a character vector containing a formatted combination of text and variable values.
-* `substr` extracts or replaces substrings in a character vector.
-* `strsplit` splits the elements of a character vector x into substrings according to the matches to substring split within them.
-* `tolower` and `toupper` convert upper-case characters in a character vector to lower-case, or vice versa. Non-alphabetic characters are left unchanged.
-* `nchar` takes a character vector as an argument and returns a vector whose elements contain the sizes of the corresponding elements of x.
-
-## Logic
-
-* `xor` indicates elementwise exclusive OR.
 
 ## Data visualization
 
@@ -77,7 +69,18 @@ A tutorial for creating heat maps in R, including with base and ggplot2 system.
 * `readline` reads a line from the terminal (in interactive use).
 * `::` to use functions (once) without loading the package For example, calling `reshape2::melt` is equivalent to `library(reshape2)` or `require(reshape2)` before `melt`.
 
-## Functions do loops or parallel operations
+### Word processing
+
+* [R的字串處理](https://www.ptt.cc/bbs/Statistics/M.1277714037.A.2CC.html)
+* `grep`, `grepl`, `regexpr`, `gregexpr` and `regexec` search for matches to argument pattern within each element of a character vector: they differ in the format of and amount of detail in the results.
+* `sub` and `gsub` perform replacement of the first and all matches respectively.
+* `sprintf` returns a character vector containing a formatted combination of text and variable values.
+* `substr` extracts or replaces substrings in a character vector.
+* `strsplit` splits the elements of a character vector x into substrings according to the matches to substring split within them.
+* `tolower` and `toupper` convert upper-case characters in a character vector to lower-case, or vice versa. Non-alphabetic characters are left unchanged.
+* `nchar` takes a character vector as an argument and returns a vector whose elements contain the sizes of the corresponding elements of x.
+
+### Functions do loops or parallel operations
 
 * `split` divides the data in the vector x into the groups defined by f.
 * `apply`, `sapply`, `lapply`, `tapply`, and `mapply` ("apply" family). See [an example of `mapply`](mapply_example.R) since it's more complicated.
@@ -97,7 +100,7 @@ A tutorial for creating heat maps in R, including with base and ggplot2 system.
 * `replicate` is a wrapper for the common use of sapply for repeated evaluation of an expression (which will usually involve random number generation).
 * `Vectorize` creates a function wrapper that vectorizes the action of its argument FUN.
 
-## Other useful functions
+### Other useful functions
 
 * `class` returns the data type (or to be specific, the method) of one object. Compare this with `mode`.
 * `str` compactly displays the internal structure of an R object
@@ -159,6 +162,7 @@ Building interactive interface and present data to others even they don't know R
 
 ### Answered
 
+* [Compare multiple column of dataframe with condition R](https://stackoverflow.com/questions/48799511/compare-multiple-column-of-dataframe-with-condition-r/48800961#48800961)
 * [Could not fetch elements from a list in R as one element contains multiple elements](https://stackoverflow.com/questions/44096790/could-not-fetch-elements-from-a-list-in-r-as-one-element-contains-multiple-elem/44097682#44097682)
 * [Export R plot to multiple formats](https://stackoverflow.com/questions/48132169/export-r-plot-to-multiple-formats/48134298#48134298)
 * [Extracting values from nested lists](https://stackoverflow.com/questions/42771789/extracting-values-from-nested-lists/42780187#42780187)
