@@ -162,6 +162,7 @@ Building interactive interface and present data to others even they don't know R
 
 ### Answered
 
+* [Can't save an object within function](https://stackoverflow.com/questions/48801848/cant-save-an-object-within-function/48802564#48802564)
 * [Compare multiple column of dataframe with condition R](https://stackoverflow.com/questions/48799511/compare-multiple-column-of-dataframe-with-condition-r/48800961#48800961)
 * [Could not fetch elements from a list in R as one element contains multiple elements](https://stackoverflow.com/questions/44096790/could-not-fetch-elements-from-a-list-in-r-as-one-element-contains-multiple-elem/44097682#44097682)
 * [Export R plot to multiple formats](https://stackoverflow.com/questions/48132169/export-r-plot-to-multiple-formats/48134298#48134298)
