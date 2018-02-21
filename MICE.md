@@ -19,10 +19,12 @@ MICE有一個很重要的前設，那就是所有的缺失值必須都是隨機�
 * [mice](https://cran.r-project.org/web/packages/mice/index.html) in R
   * Reference: [Stef van Buuren, Karin Groothuis-Oudshoorn (2011). mice: Multivariate Imputation by Chained Equations in R. *Journal of Statistical Software*, 45(3), 1-67.](https://www.jstatsoft.org/article/view/v045i03)
   * GitHub: [stefvanbuuren/mice](https://github.com/stefvanbuuren/mice)
-* [fancyimpute](https://pypi.python.org/pypi/fancyimpute) in Python
+* [fancyimpute](https://pypi.python.org/pypi/fancyimpute) or scikit-mice in Python (and some others)
   * GitHub:
     1. [iskandr/fancyimpute](https://github.com/iskandr/fancyimpute)
     2. [Ouwen/scikit-mice](https://github.com/Ouwen/scikit-mice)
+
+目前找到的MICE in Python套件中，各家用的填補算法不同。例如fancyimpute是用Bayesian ridge regression，且假設變數均為ordinal distribution；scikit-mice則開放使用者自scikit-learn中匯入（import）所需演算法。
 
 ----
 
