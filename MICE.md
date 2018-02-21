@@ -20,7 +20,9 @@ MICE有一個很重要的前設，那就是所有的缺失值必須都是隨機�
   * Reference: [Stef van Buuren, Karin Groothuis-Oudshoorn (2011). mice: Multivariate Imputation by Chained Equations in R. *Journal of Statistical Software*, 45(3), 1-67.](https://www.jstatsoft.org/article/view/v045i03)
   * GitHub: [stefvanbuuren/mice](https://github.com/stefvanbuuren/mice)
 * [fancyimpute](https://pypi.python.org/pypi/fancyimpute) in Python
-  * GitHub: [iskandr/fancyimpute](https://github.com/iskandr/fancyimpute)
+  * GitHub:
+    1. [iskandr/fancyimpute](https://github.com/iskandr/fancyimpute)
+    2. [Ouwen/scikit-mice](https://github.com/Ouwen/scikit-mice)
 
 ----
 
