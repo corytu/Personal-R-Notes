@@ -139,6 +139,8 @@ R interface to Google's chart tools, allowing users to create interactive charts
 "Miscellaneous Functions for 'Grid' Graphics." A tutorial can be found <a href="http://www.sthda.com/english/wiki/ggplot2-easy-way-to-mix-multiple-graphs-on-the-same-page-r-software-and-data-visualization">here</a>.
 * [leaflet](https://rstudio.github.io/leaflet/)<br>
 Useful for adding markers and (interactive) polygons on the map.
+* [lme4](https://cran.r-project.org/web/packages/lme4/index.html)<br>
+Package for creating (generalized) linear mixed-effects model. Also see [regression on repeated measurements](RepeatedMeasurements.md) for discussions on this topic.
 * [magrittr](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html)<br>
 The "pipe-like" operator `%>%` allows people to transmit a value or object to an expression or function call.
 * [mice](https://cran.r-project.org/web/packages/mice/index.html)<br>
