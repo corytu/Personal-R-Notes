@@ -1,7 +1,7 @@
 ---
 title: "Regression on Repeated Measurements"
 author: "Yu-Zhen Tu"
-date: "2018/2/25"
+date: "2018/2/26"
 output: github_document
 ---
 
@@ -35,7 +35,7 @@ df_test <- data.frame(subject_id = factor(rep(c(1,2,3), each = 4)),
 df_test
 ```
 
-In the following paragraphs, I will build two models based on the pseudo-data. One is simple linear regression model, and the other is mixed effect model. I will use `lm` and `lmer` function in R respectively.
+In the following paragraphs, I will build two models based on the pseudo-data. One is simple linear regression model, and the other is mixed-effects model. I will use `lm` and `lmer` function in R respectively.
 
 ## Analysis results & Discussion
 
@@ -76,20 +76,25 @@ Quoted from the paper "Linear regression analysis with repeated measurements" in
 
 > Since measurements taken on a single subject tend to be more alike than those taken on different subjects, this will be the case in repeated measures regression unless the within-subject clustering is entirely explained by differences in X... depending also on how the values of the independent variable are selected, a statistically nonsignificant relationship between Y and X may be incorrectly reported as significant, and confidence intervals involving beta_0 and beta_1, may be misleadingly short.
 
-To address this problem, let's instead try mixed effect model, where "user" will also be considered as one feature of random effect.
+To address this problem, let's instead try mixed-effects model, where "subject" will also be considered as one feature of random effect.
+
+### Mixed-effects model
+
+We see from the figure above that the average baselines of subjects are very different. Hence I group the data points by subjects and allow the subjects have their own intercepts of pain vs. dosage:
 
 ```{r}
 summary(lmer(pain ~ dosage + (1 | subject_id), data = df_test))
-summary(lmer(pain ~ dosage + (1+dosage | subject_id), data = df_test))
 ```
+
+Now we see the fixed effect of dosage is -8.1568, which means that we expect about eight-units decrease of pain when the dosage is increased by one unit.
 
 ## Conclusion
 
-The simple linear regression model, unlike mixed effect model, regards all data points as being independent and seeks ordinary least squares without considering individual contributions to the global trend. Hence, when performing data analyses related to repeated measurements, make sure this issue is factored.
+The simple linear regression model, unlike mixed-effects model, regards all data points as being independent and seeks ordinary least squares without considering individual contributions to the global trend. Hence, when performing data analyses related to repeated measurements, make sure this issue is factored.
 
 ## References
 
 * [Baayen, R. H., Davidson, D. J., & Bates, D. M. (2008). Mixed-effects modeling with crossed random effects for subjects and items. _Journal of Memory and Language_, 59(4), 390-412.](https://www.sciencedirect.com/science/article/pii/S0749596X07001398)
 * [Bates, D., Mächler, M., Bolker, B., & Walker, S. (2015). Fitting Linear Mixed-Effects Models Using lme4. _Journal of Statistical Software_, 67(1), 1-48.](https://www.jstatsoft.org/article/view/v067i01/0)
 * [Donner, A. (1984). Linear regression analysis with repeated measurements. _Journal of Chronic Diseases_, 37(6), 441-448.](http://www.jclinepi.com/article/0021-9681(84)90027-4/abstract)
-* [Mixed model](https://en.wikipedia.org/wiki/Mixed_model) on Wikipedia
+* [Obtaining a nonsence estimate of fixed slope after including random slope into the model](https://stats.stackexchange.com/q/330463/150140) on Cross Validated
