@@ -1,6 +1,6 @@
 Regression on Repeated Measurements
 ================
-Yu-Zhen Tu
+Yu-Zhen Tu<br>
 2018/2/26
 
 Introduction
