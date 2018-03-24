@@ -1,6 +1,6 @@
 Regression on Repeated Measurements
 ================
-Yu-Zhen Tu<br>
+Yu-Zhen Tu
 2018/2/26
 
 Introduction
@@ -161,3 +161,8 @@ References
 -   [Bates, D., Mächler, M., Bolker, B., & Walker, S. (2015). Fitting Linear Mixed-Effects Models Using lme4. *Journal of Statistical Software*, 67(1), 1-48.](https://www.jstatsoft.org/article/view/v067i01/0)
 -   [Donner, A. (1984). Linear regression analysis with repeated measurements. *Journal of Chronic Diseases*, 37(6), 441-448.](http://www.jclinepi.com/article/0021-9681(84)90027-4/abstract)
 -   [Obtaining a nonsence estimate of fixed slope after including random slope into the model](https://stats.stackexchange.com/q/330463/150140) on Cross Validated
+
+Extended Readings
+-----------------
+
+-   [Predictive Modeling - Should we care about mixed modeling?](https://stats.stackexchange.com/questions/22407/predictive-modeling-should-we-care-about-mixed-modeling)

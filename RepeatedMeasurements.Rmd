@@ -98,3 +98,7 @@ The simple linear regression model, unlike mixed-effects model, regards all data
 * [Bates, D., Mächler, M., Bolker, B., & Walker, S. (2015). Fitting Linear Mixed-Effects Models Using lme4. _Journal of Statistical Software_, 67(1), 1-48.](https://www.jstatsoft.org/article/view/v067i01/0)
 * [Donner, A. (1984). Linear regression analysis with repeated measurements. _Journal of Chronic Diseases_, 37(6), 441-448.](http://www.jclinepi.com/article/0021-9681(84)90027-4/abstract)
 * [Obtaining a nonsence estimate of fixed slope after including random slope into the model](https://stats.stackexchange.com/q/330463/150140) on Cross Validated
+
+## Extended Readings
+
+* [Predictive Modeling - Should we care about mixed modeling?](https://stats.stackexchange.com/questions/22407/predictive-modeling-should-we-care-about-mixed-modeling)
