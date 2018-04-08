@@ -90,7 +90,7 @@ Now we see the fixed effect of dosage is -8.1568, which means that we expect abo
 
 ## Conclusion
 
-The simple linear regression model, unlike mixed-effects model, regards all data points as being independent and seeks ordinary least squares without considering individual contributions to the global trend. Hence, when performing data analyses related to repeated measurements, make sure this issue is factored.
+The simple linear regression model, unlike mixed-effects model, regards all data points as being independent and seeks ordinary least squares without considering individual contributions to the global trend, which can generate misleading inference. Hence, when performing data analyses related to repeated measurements, make sure this issue is factored.
 
 ## References
 
