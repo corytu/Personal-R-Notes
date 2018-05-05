@@ -1,4 +1,4 @@
-# Personal-R-Notes
+# R Notes
 
 * [General articles](#general-articles)
 * [Getting help](#getting-help)
@@ -152,6 +152,6 @@ A powerful package to build interactive plots. Its `plot_ly` function creates va
 * [rattle](http://rattle.togaware.com)<br>
 Wonderful GUI for machine learning analyses. The author emphasizes its capability of creating logs when users click the GUI, and exporting them as a shortcut for further argument tuning. Programming is still encouraged.
 * [reshape2](https://cran.r-project.org/package=reshape2)<br>
-`melt` the data into a long-format or `cast` it into a wide-format. An example is provided <a href="https://corytu.github.io/R_Language_Playground/reshape2_melt.html">here</a>.
+`melt` the data into a long-format or `cast` it into a wide-format. An example is provided <a href="https://corytu.github.io/RLanguagePresentations/docs/reshape2_melt.html">here</a>.
 * [shiny](https://shiny.rstudio.com/)<br>
 Building interactive interface and present data to others even they don't know R. Its tutorial is very worth reading.
